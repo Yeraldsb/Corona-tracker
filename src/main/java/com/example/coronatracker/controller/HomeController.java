@@ -3,6 +3,7 @@ package com.example.coronatracker.controller;
 import com.example.coronatracker.models.LocationStatus;
 import com.example.coronatracker.services.CoronaVirusDataServer;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.devtools.restart.RestartScope;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,9 +16,10 @@ public class HomeController {
     final
     CoronaVirusDataServer coronaVirusDataServer;
 
-    public HomeController( CoronaVirusDataServer coronaVirusDataServer) {
+    public HomeController(CoronaVirusDataServer coronaVirusDataServer) {
         this.coronaVirusDataServer = coronaVirusDataServer;
     }
+
 
     @GetMapping("/")
     public String home(Model model){

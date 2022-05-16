@@ -2,6 +2,7 @@ package com.example.coronatracker.models;
 
 public class LocationStatus {
 
+    private Long id;
     private String state;
     private String country;
     private int latestTotalCases;
